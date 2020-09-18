@@ -33,6 +33,7 @@ public class ContactsPage extends BasePage {
 		elementUtil.elementSendkeys(confipassword, "suresh1234567");
 		elementUtil.elementClick(save);
 		System.out.println("modifie");
+		System.out.println("modifie");
 
 	}
 	/**
