@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [hubspot regression test suite]">
+  <test thread-count="5" name="hubspot test regression test suite (failed)">
+    <classes>
+      <class name="com.hubspot.test.HomePageTest">
+        <methods>
+          <include name="setup"/>
+          <include name="tearDown"/>
+          <include name="checkingWelcome"/>
+        </methods>
+      </class> <!-- com.hubspot.test.HomePageTest -->
+    </classes>
+  </test> <!-- hubspot test regression test suite (failed) -->
+</suite> <!-- Failed suite [hubspot regression test suite] -->
