@@ -3,11 +3,9 @@ package com.hubspot.test;
 import java.util.Properties;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import com.homepage.base.BasePage;
@@ -15,7 +13,8 @@ import com.hubspot.pages.ContactsPage;
 import com.hubspot.pages.HomePage;
 import com.hubspot.pages.LogInPage;
 import com.hubspot.util.Credentials;
-import com.hubspot.util.ElementUtil;
+
+import com.hubspot.util.ExcelUtil;
 
 public class ContactsPageTest {
 
@@ -26,6 +25,7 @@ public class ContactsPageTest {
 	HomePage homepage;
 	Credentials credentials;
 	ContactsPage contactsPage;
+	com.hubspot.util.ExcelUtil excelutil;
 
 	@BeforeMethod
 	public void setup() throws InterruptedException {
@@ -40,16 +40,25 @@ public class ContactsPageTest {
 		credentials = new Credentials(properties.getProperty("username"), properties.getProperty("password"));
 		homepage = loginpage.logIn(credentials);
 		contactsPage = homepage.gotContactsPage();
+		//excelutil = new com.hubspot.util.ExcelUtil();
 
 	}
 	
-	@Test
-	public void getFilling()
+	//
+
+	@DataProvider()
+	public Object[][] getContactData() {
+		Object data[][] = ExcelUtil.getTestData("EmpData");
+		return data;
+	}
+	//
+	
+
+	@Test(priority = 0, dataProvider = "getContactData")
+	public void getFilling(String empnam, String username, String pwd, String confpwd)
 	{
-		contactsPage.filling();
+		contactsPage.filling(empnam, username, pwd, confpwd);
 	}
-	
-
 
 	@AfterMethod
 	public void tearDown() {

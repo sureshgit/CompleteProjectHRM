@@ -25,17 +25,28 @@ public class ContactsPage extends BasePage {
 	By pim=By.xpath("//b[text()='PIM']");
 	By custome=By.linkText("Custom Fields");
 
-	public void filling() {
+	public void filling(String empname, String usernam, String passwod, String confpassword) {
 
-		elementUtil.elementSendkeys(employeename, "Anna Hamilton");
-		elementUtil.elementSendkeys(username, "msrangandhv3434");
-		elementUtil.elementSendkeys(password, "suresh1234567");
-		elementUtil.elementSendkeys(confipassword, "suresh1234567");
+		elementUtil.elementSendkeys(employeename, empname);
+		elementUtil.elementSendkeys(username, usernam);
+		elementUtil.elementSendkeys(password, passwod);
+		elementUtil.elementSendkeys(confipassword,confpassword);
 		elementUtil.elementClick(save);
-		System.out.println("modifie");
-		System.out.println("modifie");
+		
+		
+		
+		
+
+		
+		
 
 	}
+	
+	
+	
+	
+	
+	
 	/**
 	public void customeDetails()
 	{
