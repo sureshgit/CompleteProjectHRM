@@ -4,6 +4,8 @@
 
   <test name="hubspot test regression test suite " >
   <parameter name="browsern" value="chrome"> </parameter>
+  
+  
     
     <classes>
       <class name="com.hubspot.test.LogInPageTest"/>

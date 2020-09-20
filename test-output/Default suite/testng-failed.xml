@@ -3,11 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="SeleniumCorePractice.Adding">
+      <class name="com.hubspot.test.ContactsPageTest">
         <methods>
-          <include name="gettingData"/>
+          <include name="getFilling"/>
+          <include name="setup"/>
+          <include name="tearDown"/>
         </methods>
-      </class> <!-- SeleniumCorePractice.Adding -->
+      </class> <!-- com.hubspot.test.ContactsPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

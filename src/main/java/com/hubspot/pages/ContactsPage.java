@@ -21,17 +21,20 @@ public class ContactsPage extends BasePage {
 	By username = By.id("systemUser_userName");
 	By password = By.id("systemUser_password");
 	By confipassword = By.id("systemUser_confirmPassword");
-	By save = By.id("btnSave");
+	//By save = By.id("btnSave");
+	By save=By.xpath("//input[@type='button' and @name='btnSave']");
 	By pim=By.xpath("//b[text()='PIM']");
 	By custome=By.linkText("Custom Fields");
 
-	public void filling(String empname, String usernam, String passwod, String confpassword) {
+	public ElementUtil filling(String empname, String usernam, String passwod, String confpassword) {
 
 		elementUtil.elementSendkeys(employeename, empname);
 		elementUtil.elementSendkeys(username, usernam);
 		elementUtil.elementSendkeys(password, passwod);
 		elementUtil.elementSendkeys(confipassword,confpassword);
-		elementUtil.elementClick(save);
+		elementUtil.waitForElementPresent(save);
+		
+		return elementUtil;
 		
 		
 		

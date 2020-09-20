@@ -2,23 +2,41 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="30186" started-at="2020-09-18T09:36:39 IST" finished-at="2020-09-18T09:37:09 IST">
+  <suite name="Default suite" duration-ms="26408" started-at="2020-09-20T12:11:01 IST" finished-at="2020-09-20T12:11:28 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="30186" started-at="2020-09-18T09:36:39 IST" finished-at="2020-09-18T09:37:09 IST">
+    <test name="Default test" duration-ms="26408" started-at="2020-09-20T12:11:01 IST" finished-at="2020-09-20T12:11:28 IST">
       <class name="com.hubspot.test.ContactsPageTest">
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.hubspot.test.ContactsPageTest@ea1a8d5]" name="setup" is-config="true" duration-ms="28564" started-at="2020-09-18T09:36:39 IST" finished-at="2020-09-18T09:37:07 IST">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.hubspot.test.ContactsPageTest@7a765367]" name="setup" is-config="true" duration-ms="24642" started-at="2020-09-20T12:11:02 IST" finished-at="2020-09-20T12:11:27 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="getFilling()[pri:0, instance:com.hubspot.test.ContactsPageTest@ea1a8d5]" name="getFilling" duration-ms="882" started-at="2020-09-18T09:37:07 IST" finished-at="2020-09-18T09:37:08 IST">
+        <test-method status="PASS" signature="getFilling(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.hubspot.test.ContactsPageTest@7a765367]" name="getFilling" duration-ms="1094" started-at="2020-09-20T12:11:27 IST" data-provider="getContactData" finished-at="2020-09-20T12:11:28 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Anna Hamilton]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[naveen kumar]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[10Vv!f202020]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[10Vv!f202020]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getFilling -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.hubspot.test.ContactsPageTest@ea1a8d5]" name="tearDown" is-config="true" duration-ms="691" started-at="2020-09-18T09:37:08 IST" finished-at="2020-09-18T09:37:09 IST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
       </class> <!-- com.hubspot.test.ContactsPageTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
