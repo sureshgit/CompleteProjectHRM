@@ -13,6 +13,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import com.homepage.base.BasePage;
+import com.hubspot.pages.ContactsPage;
 import com.hubspot.pages.HomePage;
 import com.hubspot.pages.LogInPage;
 import com.hubspot.util.Credentials;
@@ -25,8 +26,9 @@ public class HomePageTest {
 	LogInPage loginpage;
 	HomePage homepage;
 	Credentials credentials;
+	ContactsPage contactpage;
 
-	@BeforeMethod
+	@BeforeTest
 	public void setup() throws InterruptedException {
 		basepage = new BasePage();
 		properties = basepage.driverProperties();
@@ -44,27 +46,34 @@ public class HomePageTest {
 
 	@Test(priority = 1)
 	public void checkingAdmin() {
-		Assert.assertTrue(homepage.doAdmin());
+		
+		String adminclick=homepage.doAdmin();
+		Assert.assertEquals(adminclick, "Admin");
 
 	}
 
 	@Test(priority = 2)
 	public void checkingWelcome() {
-		//String header = homepage.dowelcomeHom();
-		//System.out.println("header is " + header);
-	//	Assert.assertEquals(header, "Welcome Linsdsda");
-		Assert.assertTrue(homepage.doWelcome());
+	
+		homepage.doWelcome();
 
 	}
 
 	@Test(priority = 3)
 	public void checkingInfo() {
 		
-		Assert.assertTrue(homepage.doInfo());
+		String infoclick=homepage.doInfo();
+		Assert.assertEquals(infoclick, "My Info");
+	}
+	@Test(priority = 4)
+	public void pagenavigation()
+	{
+		contactpage=homepage.getContactsPage();
+		System.out.println("calling pagenavigation");
 	}
 	
 	
-	@AfterMethod
+	@AfterTest
 	public void tearDown() {
 		driver.quit();
 	}

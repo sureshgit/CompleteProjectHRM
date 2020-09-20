@@ -40,7 +40,7 @@ public class ContactsPageTest {
 
 		credentials = new Credentials(properties.getProperty("username"), properties.getProperty("password"));
 		homepage = loginpage.logIn(credentials);
-		contactsPage = homepage.gotContactsPage();
+		contactsPage = homepage.getContactsPage();
 		elementutil =new ElementUtil(driver);
 		// excelutil = new com.hubspot.util.ExcelUtil();
 

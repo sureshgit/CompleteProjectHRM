@@ -22,17 +22,18 @@ public class HomePage extends BasePage {
 
 	}
 
-	public boolean doWelcome() {
+	public void doWelcome() {
 
-		return elementUtil.elementIsdisplayed(buz);
+	//	return elementUtil.elementIsdisplayed(buz);
+		elementUtil.elementClick(add);
 	}
 
-	public boolean doAdmin() {
-		return elementUtil.elementIsdisplayed(Admin);
+	public String doAdmin() {
+		return elementUtil.elementText(Admin);
 	}
 
-	public boolean doInfo() {
-		return elementUtil.elementIsdisplayed(Info);
+	public String doInfo() {
+		return elementUtil.elementText(Info);
 
 	}
 
@@ -42,7 +43,7 @@ public class HomePage extends BasePage {
 
 	}
 
-	public ContactsPage gotContactsPage() {
+	public ContactsPage getContactsPage() {
 		clickOContacts();
 		return new ContactsPage(driver);
 	}
