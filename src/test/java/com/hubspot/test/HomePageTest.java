@@ -64,6 +64,12 @@ public class HomePageTest {
 		
 		String infoclick=homepage.doInfo();
 		Assert.assertEquals(infoclick, "My Info");
+		
+		
+		
+		
+		
+	
 	}
 	@Test(priority = 4)
 	public void pagenavigation()

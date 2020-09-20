@@ -13,7 +13,7 @@ public class HomePage extends BasePage {
 
 	By buz = By.xpath("//b[text()='Buzz']");
 	By Admin = By.xpath("//b[text()='Admin']");
-	By Info = By.xpath("//b[text()='My Info']");
+	By MyInfo = By.xpath("//b[text()='My Info']");
 	By add = By.xpath("//input[@type='button' and  @id='btnAdd']");
 
 	public HomePage(WebDriver driver) {
@@ -33,7 +33,7 @@ public class HomePage extends BasePage {
 	}
 
 	public String doInfo() {
-		return elementUtil.elementText(Info);
+		return elementUtil.elementText(MyInfo);
 
 	}
 
