@@ -1,3 +1,5 @@
+//package com.qa.hubspot.listeners;
+
 package com.hubspot.listeners;
 
 import java.io.IOException;
@@ -17,12 +19,12 @@ import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.aventstack.extentreports.reporter.configuration.ChartLocation;
-import com.aventstack.extentreports.reporter.configuration.Theme;  
+import com.aventstack.extentreports.reporter.configuration.Theme;
 import com.homepage.base.BasePage;
 
 public class ExtentReportListener extends BasePage implements ITestListener {
 
-	private static final String OUTPUT_FOLDER = "./Reports/";
+	private static final String OUTPUT_FOLDER = "./build/";
 	private static final String FILE_NAME = "TestExecutionReport.html";
 
 	private static ExtentReports extent = init();
@@ -103,7 +105,7 @@ public class ExtentReportListener extends BasePage implements ITestListener {
 	}
 
 	private String getScreenshot() {
-		// TODO Auto-generated method stub
+	
 		return null;
 	}
 

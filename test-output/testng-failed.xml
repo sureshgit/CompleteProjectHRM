@@ -4,13 +4,12 @@
   <test thread-count="4" name="hubspot test regression test suite (failed)" parallel="tests">
     <parameter name="browsern" value="chrome"/>
     <classes>
-      <class name="com.hubspot.test.LogInPageTest">
+      <class name="com.hubspot.test.ContactsPageTest">
         <methods>
-          <include name="tearDown"/>
-          <include name="verifyTitleTest"/>
+          <include name="getFilling"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- com.hubspot.test.LogInPageTest -->
+      </class> <!-- com.hubspot.test.ContactsPageTest -->
     </classes>
   </test> <!-- hubspot test regression test suite (failed) -->
 </suite> <!-- Failed suite [hubspot regression all test suite] -->
