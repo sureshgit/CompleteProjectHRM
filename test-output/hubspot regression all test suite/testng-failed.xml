@@ -2,14 +2,19 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite thread-count="4" guice-stage="DEVELOPMENT" name="Failed suite [hubspot regression all test suite]" parallel="tests">
   <test thread-count="4" name="hubspot test regression test suite (failed)" parallel="tests">
-    <parameter name="browsern" value="chrome"/>
+    <groups>
+      <run>
+        <include name="smoke"/>
+      </run>
+    </groups>
     <classes>
-      <class name="com.hubspot.test.ContactsPageTest">
+      <class name="com.hubspot.test.HomePageTest">
         <methods>
-          <include name="getFilling"/>
-          <include name="setup"/>
+          <include name="checkingInfo"/>
+          <include name="checkingAdmin"/>
+          <include name="checkingWelcome"/>
         </methods>
-      </class> <!-- com.hubspot.test.ContactsPageTest -->
+      </class> <!-- com.hubspot.test.HomePageTest -->
     </classes>
   </test> <!-- hubspot test regression test suite (failed) -->
 </suite> <!-- Failed suite [hubspot regression all test suite] -->

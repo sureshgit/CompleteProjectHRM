@@ -3,6 +3,8 @@ package com.hubspot.test;
 import java.util.Properties;
 
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -27,7 +29,7 @@ public class ContactsPageTest {
 	com.hubspot.util.ExcelUtil excelutil;
 	ElementUtil elementutil;
 
-	@BeforeMethod
+	@BeforeMethod(alwaysRun=true)
 	public void setup() throws InterruptedException {
 		basepage = new BasePage();
 		properties = basepage.driverProperties();
@@ -53,11 +55,17 @@ public class ContactsPageTest {
 		return data;
 	}
 
-	@Test(priority = 0, dataProvider = "getContactData")
+	@Test(priority = 0, dataProvider = "getContactData", groups="sanity")
 	public void getFilling(String empnam, String username, String pwd, String confpwd) {
 		elementutil=contactsPage.filling(empnam, username, pwd, confpwd);
 		
 		
+		
+	}
+	@AfterMethod
+	public void tearDown()
+	{
+		driver.quit();
 	}
 
 }

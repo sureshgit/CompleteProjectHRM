@@ -3,14 +3,14 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.hubspot.test.HomePageTest">
+      <class name="com.hubspot.test.LogInPageTest">
         <methods>
-          <include name="checkingInfo"/>
-          <include name="checkingAdmin"/>
-          <include name="setup"/>
           <include name="tearDown"/>
+          <include name="badLogin" invocation-numbers="0 1"/>
+          <include name="verifyForgetPwd"/>
+          <include name="setup"/>
         </methods>
-      </class> <!-- com.hubspot.test.HomePageTest -->
+      </class> <!-- com.hubspot.test.LogInPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

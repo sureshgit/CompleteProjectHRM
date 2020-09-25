@@ -17,7 +17,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class BasePage {
 
 	WebDriver driver;
-	Properties properties;
+	public Properties properties;
 
 	public WebDriver driver_init(String browsername) {
 		System.out.println("browsername is "+browsername);

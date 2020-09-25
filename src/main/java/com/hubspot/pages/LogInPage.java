@@ -18,7 +18,7 @@ public class LogInPage extends BasePage {
 	By password = By.id("txtPassword");
 	By login = By.id("btnLogin");
 	By forgetpassword = By.xpath("//a[text()='Forgot your password?']");
-	By loginErrorMsg=By.id("spanMessage");
+	By invalidcredentials = By.id("spanMessage");
 
 	public LogInPage(WebDriver driver) {
 		this.driver = driver;
@@ -27,32 +27,26 @@ public class LogInPage extends BasePage {
 	}
 
 	public String getTitle() {
-		return Elementutil.elementGetTitle();
+		return Elementutil.waitForTitleToBePresent("OrangeHRM", 20);
 	}
 
 	public boolean forgetPassword() {
-		return Elementutil.elementIsdisplayed(forgetpassword);
+		return Elementutil.doIsDisplayed(forgetpassword);
+		// Elementutil.doIsDisplayed(forgetpassword);
 	}
 
 	public HomePage logIn(Credentials credentials) {
-		// driver.findElement(username).sendKeys(usernam);
-		// driver.findElement(password).sendKeys(pwd);
-		// driver.findElement(login).click();
 
-		Elementutil.elementSendkeys(username, credentials.getUsername());
-		Elementutil.elementSendkeys(password, credentials.getPassword());
-		Elementutil.elementClick(login);
-		
+		Elementutil.doSendKeys(username, credentials.getUsername());
+		Elementutil.doSendKeys(password, credentials.getPassword());
+		Elementutil.doClick(login);
 
 		return new HomePage(driver);
 	}
-	
-	
-	public boolean loginErrorMsg1()
-	{
-		return Elementutil.elementIsdisplayed(loginErrorMsg);
+
+	public boolean loginErrorMsg1() {
+
+		return Elementutil.doIsDisplayed(invalidcredentials);
 	}
-	
-	
 
 }
