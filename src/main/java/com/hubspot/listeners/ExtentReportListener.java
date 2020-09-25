@@ -1,5 +1,3 @@
-//package com.qa.hubspot.listeners;
-
 package com.hubspot.listeners;
 
 import java.io.IOException;
@@ -102,11 +100,6 @@ public class ExtentReportListener extends BasePage implements ITestListener {
 					.println("Exception thrown while updating test fail status " + Arrays.toString(e.getStackTrace()));
 		}
 		test.get().getModel().setEndTime(getTime(result.getEndMillis()));
-	}
-
-	private String getScreenshot() {
-	
-		return null;
 	}
 
 	public synchronized void onTestSkipped(ITestResult result) {

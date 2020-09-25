@@ -1,61 +1,182 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="3" total="8" passed="5">
+<testng-results skipped="0" failed="0" ignored="0" total="9" passed="9">
   <reporter-output>
   </reporter-output>
-  <suite name="hubspot regression all test suite" duration-ms="142229" started-at="2020-09-25T14:57:57 IST" finished-at="2020-09-25T15:00:19 IST">
+  <suite name="hubspot regression all test suite" duration-ms="208186" started-at="2020-09-25T16:55:05 IST" finished-at="2020-09-25T16:58:33 IST">
     <groups>
       <group name="smoke">
-        <method signature="HomePageTest.checkingAdmin()[pri:1, instance:com.hubspot.test.HomePageTest@42f93a98]" name="checkingAdmin" class="com.hubspot.test.HomePageTest"/>
-        <method signature="HomePageTest.checkingInfo()[pri:3, instance:com.hubspot.test.HomePageTest@42f93a98]" name="checkingInfo" class="com.hubspot.test.HomePageTest"/>
-        <method signature="HomePageTest.checkingWelcome()[pri:2, instance:com.hubspot.test.HomePageTest@42f93a98]" name="checkingWelcome" class="com.hubspot.test.HomePageTest"/>
-        <method signature="LogInPageTest.verifyForgetPwd()[pri:4, instance:com.hubspot.test.LogInPageTest@631330c]" name="verifyForgetPwd" class="com.hubspot.test.LogInPageTest"/>
-        <method signature="LogInPageTest.verifyTitleTest()[pri:1, instance:com.hubspot.test.LogInPageTest@631330c]" name="verifyTitleTest" class="com.hubspot.test.LogInPageTest"/>
+        <method signature="HomePageTest.checkingAdmin()[pri:1, instance:com.hubspot.test.HomePageTest@4d339552]" name="checkingAdmin" class="com.hubspot.test.HomePageTest"/>
+        <method signature="HomePageTest.checkingInfo()[pri:3, instance:com.hubspot.test.HomePageTest@4d339552]" name="checkingInfo" class="com.hubspot.test.HomePageTest"/>
+        <method signature="HomePageTest.checkingWelcome()[pri:2, instance:com.hubspot.test.HomePageTest@4d339552]" name="checkingWelcome" class="com.hubspot.test.HomePageTest"/>
+        <method signature="LogInPageTest.verifyForgetPwd()[pri:4, instance:com.hubspot.test.LogInPageTest@3f200884]" name="verifyForgetPwd" class="com.hubspot.test.LogInPageTest"/>
+        <method signature="LogInPageTest.verifyTitleTest()[pri:1, instance:com.hubspot.test.LogInPageTest@3f200884]" name="verifyTitleTest" class="com.hubspot.test.LogInPageTest"/>
       </group> <!-- smoke -->
+      <group name="sanity">
+        <method signature="ContactsPageTest.getFilling(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.hubspot.test.ContactsPageTest@f0f2775]" name="getFilling" class="com.hubspot.test.ContactsPageTest"/>
+        <method signature="LogInPageTest.badLogin(java.lang.String, java.lang.String)[pri:3, instance:com.hubspot.test.LogInPageTest@3f200884]" name="badLogin" class="com.hubspot.test.LogInPageTest"/>
+        <method signature="LogInPageTest.verifyLogInPageTest()[pri:2, instance:com.hubspot.test.LogInPageTest@3f200884]" name="verifyLogInPageTest" class="com.hubspot.test.LogInPageTest"/>
+      </group> <!-- sanity -->
     </groups>
-    <test name="hubspot test regression test suite " duration-ms="142229" started-at="2020-09-25T14:57:57 IST" finished-at="2020-09-25T15:00:19 IST">
-      <class name="com.hubspot.test.HomePageTest">
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.hubspot.test.HomePageTest@42f93a98]" name="setup" is-config="true" duration-ms="36197" started-at="2020-09-25T14:57:57 IST" finished-at="2020-09-25T14:58:33 IST">
+    <test name="hubspot test regression test suite " duration-ms="208186" started-at="2020-09-25T16:55:05 IST" finished-at="2020-09-25T16:58:33 IST">
+      <class name="com.hubspot.test.ContactsPageTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.hubspot.test.ContactsPageTest@f0f2775]" name="setup" is-config="true" duration-ms="21957" started-at="2020-09-25T16:55:06 IST" finished-at="2020-09-25T16:55:27 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="checkingAdmin()[pri:1, instance:com.hubspot.test.HomePageTest@42f93a98]" name="checkingAdmin" duration-ms="3152" started-at="2020-09-25T14:58:33 IST" finished-at="2020-09-25T14:58:36 IST">
+        <test-method status="PASS" signature="getFilling(java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.hubspot.test.ContactsPageTest@f0f2775]" name="getFilling" duration-ms="590" started-at="2020-09-25T16:55:27 IST" data-provider="getContactData" finished-at="2020-09-25T16:55:28 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Anna Hamilton]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[naveen kumar]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[10Vv!f202020]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[10Vv!f202020]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getFilling -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.hubspot.test.ContactsPageTest@f0f2775]" name="tearDown" is-config="true" duration-ms="681" started-at="2020-09-25T16:55:28 IST" finished-at="2020-09-25T16:55:29 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.hubspot.test.ContactsPageTest -->
+      <class name="com.hubspot.test.HomePageTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.hubspot.test.HomePageTest@4d339552]" name="setup" is-config="true" duration-ms="18865" started-at="2020-09-25T16:55:29 IST" finished-at="2020-09-25T16:55:48 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="checkingAdmin()[pri:1, instance:com.hubspot.test.HomePageTest@4d339552]" name="checkingAdmin" duration-ms="1998" started-at="2020-09-25T16:55:48 IST" finished-at="2020-09-25T16:55:50 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkingAdmin -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.hubspot.test.HomePageTest@42f93a98]" name="setup" is-config="true" duration-ms="30463" started-at="2020-09-25T14:58:54 IST" finished-at="2020-09-25T14:59:25 IST">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.hubspot.test.HomePageTest@4d339552]" name="tearDown" is-config="true" duration-ms="677" started-at="2020-09-25T16:55:50 IST" finished-at="2020-09-25T16:55:50 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.hubspot.test.HomePageTest@4d339552]" name="setup" is-config="true" duration-ms="26871" started-at="2020-09-25T16:56:10 IST" finished-at="2020-09-25T16:56:37 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="checkingWelcome()[pri:2, instance:com.hubspot.test.HomePageTest@42f93a98]" name="checkingWelcome" duration-ms="12135" started-at="2020-09-25T14:59:25 IST" finished-at="2020-09-25T14:59:37 IST">
+        <test-method status="PASS" signature="checkingWelcome()[pri:2, instance:com.hubspot.test.HomePageTest@4d339552]" name="checkingWelcome" duration-ms="3866" started-at="2020-09-25T16:56:37 IST" finished-at="2020-09-25T16:56:41 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkingWelcome -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.hubspot.test.HomePageTest@42f93a98]" name="setup" is-config="true" duration-ms="28861" started-at="2020-09-25T14:59:37 IST" finished-at="2020-09-25T15:00:06 IST">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.hubspot.test.HomePageTest@4d339552]" name="tearDown" is-config="true" duration-ms="1133" started-at="2020-09-25T16:56:41 IST" finished-at="2020-09-25T16:56:42 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.hubspot.test.HomePageTest@4d339552]" name="setup" is-config="true" duration-ms="37250" started-at="2020-09-25T16:57:30 IST" finished-at="2020-09-25T16:58:07 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="checkingInfo()[pri:3, instance:com.hubspot.test.HomePageTest@42f93a98]" name="checkingInfo" duration-ms="231" started-at="2020-09-25T15:00:06 IST" finished-at="2020-09-25T15:00:06 IST">
+        <test-method status="PASS" signature="checkingInfo()[pri:3, instance:com.hubspot.test.HomePageTest@4d339552]" name="checkingInfo" duration-ms="11245" started-at="2020-09-25T16:58:07 IST" finished-at="2020-09-25T16:58:19 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkingInfo -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.hubspot.test.HomePageTest@4d339552]" name="tearDown" is-config="true" duration-ms="631" started-at="2020-09-25T16:58:19 IST" finished-at="2020-09-25T16:58:19 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
       </class> <!-- com.hubspot.test.HomePageTest -->
       <class name="com.hubspot.test.LogInPageTest">
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.hubspot.test.LogInPageTest@631330c]" name="setup" is-config="true" duration-ms="17780" started-at="2020-09-25T14:58:36 IST" finished-at="2020-09-25T14:58:54 IST">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.hubspot.test.LogInPageTest@3f200884]" name="setup" is-config="true" duration-ms="19374" started-at="2020-09-25T16:55:50 IST" finished-at="2020-09-25T16:56:10 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="verifyTitleTest()[pri:1, instance:com.hubspot.test.LogInPageTest@631330c]" name="verifyTitleTest" duration-ms="48" started-at="2020-09-25T14:58:54 IST" finished-at="2020-09-25T14:58:54 IST">
+        <test-method status="PASS" signature="verifyTitleTest()[pri:1, instance:com.hubspot.test.LogInPageTest@3f200884]" name="verifyTitleTest" duration-ms="16" started-at="2020-09-25T16:56:10 IST" finished-at="2020-09-25T16:56:10 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyTitleTest -->
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.hubspot.test.LogInPageTest@631330c]" name="setup" is-config="true" duration-ms="13183" started-at="2020-09-25T15:00:06 IST" finished-at="2020-09-25T15:00:19 IST">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.hubspot.test.LogInPageTest@3f200884]" name="tearDown" is-config="true" duration-ms="676" started-at="2020-09-25T16:56:10 IST" finished-at="2020-09-25T16:56:10 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.hubspot.test.LogInPageTest@3f200884]" name="setup" is-config="true" duration-ms="12332" started-at="2020-09-25T16:56:42 IST" finished-at="2020-09-25T16:56:55 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="verifyForgetPwd()[pri:4, instance:com.hubspot.test.LogInPageTest@631330c]" name="verifyForgetPwd" duration-ms="114" started-at="2020-09-25T15:00:19 IST" finished-at="2020-09-25T15:00:19 IST">
+        <test-method status="PASS" signature="verifyLogInPageTest()[pri:2, instance:com.hubspot.test.LogInPageTest@3f200884]" name="verifyLogInPageTest" duration-ms="5367" started-at="2020-09-25T16:56:55 IST" finished-at="2020-09-25T16:57:00 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLogInPageTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.hubspot.test.LogInPageTest@3f200884]" name="tearDown" is-config="true" duration-ms="731" started-at="2020-09-25T16:57:00 IST" finished-at="2020-09-25T16:57:01 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.hubspot.test.LogInPageTest@3f200884]" name="setup" is-config="true" duration-ms="12806" started-at="2020-09-25T16:57:01 IST" finished-at="2020-09-25T16:57:13 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="badLogin(java.lang.String, java.lang.String)[pri:3, instance:com.hubspot.test.LogInPageTest@3f200884]" name="badLogin" duration-ms="1190" started-at="2020-09-25T16:57:13 IST" data-provider="getLoginInvalidData" finished-at="2020-09-25T16:57:15 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[suresh]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[suresh123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- badLogin -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.hubspot.test.LogInPageTest@3f200884]" name="tearDown" is-config="true" duration-ms="772" started-at="2020-09-25T16:57:15 IST" finished-at="2020-09-25T16:57:15 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.hubspot.test.LogInPageTest@3f200884]" name="setup" is-config="true" duration-ms="12444" started-at="2020-09-25T16:57:15 IST" finished-at="2020-09-25T16:57:28 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="badLogin(java.lang.String, java.lang.String)[pri:3, instance:com.hubspot.test.LogInPageTest@3f200884]" name="badLogin" duration-ms="1577" started-at="2020-09-25T16:57:28 IST" data-provider="getLoginInvalidData" finished-at="2020-09-25T16:57:29 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[surewihdi]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[ajdajdasd]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- badLogin -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.hubspot.test.LogInPageTest@3f200884]" name="tearDown" is-config="true" duration-ms="713" started-at="2020-09-25T16:57:29 IST" finished-at="2020-09-25T16:57:30 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.hubspot.test.LogInPageTest@3f200884]" name="setup" is-config="true" duration-ms="13020" started-at="2020-09-25T16:58:19 IST" finished-at="2020-09-25T16:58:32 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="verifyForgetPwd()[pri:4, instance:com.hubspot.test.LogInPageTest@3f200884]" name="verifyForgetPwd" duration-ms="57" started-at="2020-09-25T16:58:32 IST" finished-at="2020-09-25T16:58:32 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyForgetPwd -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.hubspot.test.LogInPageTest@3f200884]" name="tearDown" is-config="true" duration-ms="713" started-at="2020-09-25T16:58:32 IST" finished-at="2020-09-25T16:58:33 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
       </class> <!-- com.hubspot.test.LogInPageTest -->
     </test> <!-- hubspot test regression test suite  -->
   </suite> <!-- hubspot regression all test suite -->
