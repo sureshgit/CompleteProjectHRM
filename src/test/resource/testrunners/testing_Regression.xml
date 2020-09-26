@@ -4,8 +4,10 @@
 	thread-count="4">
 
 	<listeners>
-		<listener
-			class-name="com.hubspot.listeners.ExtentReportListener" />
+		<!-- <listener class-name="com.hubspot.listeners.ExtentReportListener" /> -->
+		<listener class-name="com.hubspot.listeners.TestAllureListener" /> 
+			
+			
 	</listeners>
 
 
@@ -20,11 +22,9 @@
 
 		<classes>
 			<class name="com.hubspot.test.LogInPageTest" />
-			<class name="com.hubspot.test.HomePageTest" />
-			<class name="com.hubspot.test.ContactsPageTest" />
-
-
-
+				<class name="com.hubspot.test.HomePageTest" />
+					<class name="com.hubspot.test.ContactsPageTest" />
+		
 
 		</classes>
 	</test>

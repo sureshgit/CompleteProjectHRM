@@ -41,7 +41,7 @@ public class ElementUtil extends BasePage {
 		System.out.println("WebElement is created successfully : " + locator);
 
 		} catch (Exception e) {
-			//System.out.println("some exception got occurred with this locator: " + locator);
+			//System.out.println("some exception got occurred with this locator is: " + locator);
 		}
 		return element;
 	}
@@ -66,8 +66,8 @@ public class ElementUtil extends BasePage {
 		return getElement(locator).isDisplayed();
 	}
 
-	// **********************************Drop Down Utils
-	// *********************************
+	//==============================Drop Down Utils ===========================
+
 
 	public void doSelectByVisibleText(By locator, String value) {
 		Select select = new Select(getElement(locator));
@@ -178,8 +178,8 @@ public class ElementUtil extends BasePage {
 		action.click(getElement(locator)).build().perform();
 	}
 
-	// ***************************** Wait Utils
-	// *******************************************
+	//==============================Wait Utils =================================
+	
 
 	public List<WebElement> visibilityofAllElements(By locator, int timeout) {
 		WebDriverWait wait = new WebDriverWait(driver, timeout);

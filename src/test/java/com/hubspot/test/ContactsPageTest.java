@@ -2,6 +2,7 @@ package com.hubspot.test;
 
 import java.util.Properties;
 
+
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
@@ -16,6 +17,10 @@ import com.hubspot.pages.LogInPage;
 import com.hubspot.util.Credentials;
 import com.hubspot.util.ElementUtil;
 import com.hubspot.util.ExcelUtil;
+
+import io.qameta.allure.Description;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 
 public class ContactsPageTest {
 
@@ -53,9 +58,12 @@ public class ContactsPageTest {
 	public Object[][] getContactData() {
 		Object data[][] = ExcelUtil.getTestData("EmpData");
 		return data;
-	}
 
+	}
+	
 	@Test(priority = 0, dataProvider = "getContactData", groups="sanity")
+	@Description("verify contacts  Page Title Test.....")
+	@Severity(SeverityLevel.CRITICAL)
 	public void getFilling(String empnam, String username, String pwd, String confpwd) {
 		elementutil=contactsPage.filling(empnam, username, pwd, confpwd);
 		

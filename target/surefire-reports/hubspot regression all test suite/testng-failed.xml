@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="4" guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [hubspot regression all test suite]" parallel="tests">
+  <listeners>
+    <listener class-name="com.hubspot.listeners.TestAllureListener"/>
+  </listeners>
+  <test thread-count="4" verbose="0" name="hubspot test regression test suite (failed)" parallel="tests">
+    <classes>
+      <class name="com.hubspot.test.ContactsPageTest">
+        <methods>
+          <include name="getFilling"/>
+          <include name="setup"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.hubspot.test.ContactsPageTest -->
+    </classes>
+  </test> <!-- hubspot test regression test suite (failed) -->
+</suite> <!-- Failed suite [hubspot regression all test suite] -->

@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.hubspot.test.LogInPageTest">
+      <class name="com.hubspot.test.ContactsPageTest">
         <methods>
-          <include name="tearDown"/>
-          <include name="badLogin" invocation-numbers="0 1"/>
-          <include name="verifyForgetPwd"/>
+          <include name="getFilling"/>
           <include name="setup"/>
+          <include name="tearDown"/>
         </methods>
-      </class> <!-- com.hubspot.test.LogInPageTest -->
+      </class> <!-- com.hubspot.test.ContactsPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

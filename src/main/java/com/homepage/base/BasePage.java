@@ -24,10 +24,10 @@ public class BasePage {
 	public Properties properties;
 	
 	
-	public static ThreadLocal<WebDriver> tlDriver = new ThreadLocal<WebDriver>();
+	public static ThreadLocal<WebDriver> tDriver = new ThreadLocal<WebDriver>();
 
 	public static synchronized WebDriver getDriver() {
-		return tlDriver.get();
+		return tDriver.get();
 	}
 
 	public WebDriver driver_init(String browsername) {

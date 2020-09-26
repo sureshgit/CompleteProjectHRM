@@ -16,6 +16,10 @@ import com.hubspot.pages.HomePage;
 import com.hubspot.pages.LogInPage;
 import com.hubspot.util.Credentials;
 
+import io.qameta.allure.Description;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
+
 
 
 public class LogInPageTest {
@@ -43,6 +47,8 @@ public class LogInPageTest {
 
 
 	@Test(priority = 1, groups="smoke")
+	@Description("verify Login Page Title Test.....")
+	@Severity(SeverityLevel.NORMAL)
 	public void verifyTitleTest() {
 		String title=loginpage.getTitle();
 		Assert.assertEquals(title, "OrangeHRM");
@@ -51,6 +57,8 @@ public class LogInPageTest {
 
 
 	@Test(priority = 2, groups="sanity")
+	@Description("verify Login Page Title Test.....")
+	@Severity(SeverityLevel.CRITICAL)
 	public void verifyLogInPageTest() {
 		homepage = loginpage.logIn(credentials);
 
@@ -73,6 +81,8 @@ public class LogInPageTest {
 	
 
 	@Test(priority=3, dataProvider="getLoginInvalidData", groups="sanity" )
+	@Description("verify badLogin Page Title Test.....")
+	@Severity(SeverityLevel.NORMAL)
 	public void badLogin(String name ,String pwd) {
 		credentials.setUsername(name);
 		credentials.setPassword(pwd);
@@ -85,6 +95,8 @@ public class LogInPageTest {
 	
 	
 	@Test(priority = 4, groups="smoke")
+	@Description("verify forgetpwd Test.....")
+	@Severity(SeverityLevel.NORMAL)
 	public void verifyForgetPwd() {
 		
 
