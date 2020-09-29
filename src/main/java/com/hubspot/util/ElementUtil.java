@@ -32,19 +32,25 @@ public class ElementUtil extends BasePage {
 
 	public WebElement getElement(By locator) {
 		WebElement element = null;
-		try { 	 	
+		try {
 			//System.out.println("locator is : " + locator);
 			element = driver.findElement(locator);
-	if (properties.getProperty("highlight").equalsIgnoreCase("yes")) {
-			jsUtil.flash(element);
-		}
-		System.out.println("WebElement is created successfully : " + locator);
+//			if (properties.getProperty("highlightElement").equalsIgnoreCase("yes")) {
+//				jsUtil.flash(element);
+//			}
+			if(highlightElement)
+			{
+				jsUtil.flash(element);
+			}
+			//System.out.println("WebElement is created successfully : " + locator);
 
 		} catch (Exception e) {
-			//System.out.println("some exception got occurred with this locator is: " + locator);
+			System.out.println("some exception got occurred with this locator: " + locator);
 		}
 		return element;
 	}
+		
+		
 
 	public void doSendKeys(By locator, String value) {
 		waitForElementPresent(locator, 10);

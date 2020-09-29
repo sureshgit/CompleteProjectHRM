@@ -5,9 +5,7 @@ import java.util.Properties;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import com.homepage.base.BasePage;
@@ -26,57 +24,41 @@ public class HomePageTest {
 	Credentials credentials;
 	ContactsPage contactpage;
 
-	@BeforeMethod(alwaysRun=true)
-	public void setup()  {
+	@BeforeMethod(alwaysRun = true)
+	public void setup() {
 		basepage = new BasePage();
 		properties = basepage.driverProperties();
 		String browsername = properties.getProperty("browser");
 		driver = basepage.driver_init(browsername);
 		driver.get(properties.getProperty("url"));
 		loginpage = new LogInPage(driver);
-		
-		credentials=new Credentials(properties.getProperty("username"), properties.getProperty("password"));
+
+		credentials = new Credentials(properties.getProperty("username"), properties.getProperty("password"));
 		homepage = loginpage.logIn(credentials);
-		
-	//	Thread.sleep(50000);
 
 	}
 
-	@Test(priority = 1, groups="smoke")
+	@Test(priority = 1, groups = "smoke")
 	public void checkingAdmin() {
-		
-	
+
 		Assert.assertTrue(homepage.doAdmin());
 
 	}
 
-	@Test(priority = 2, groups="smoke")
+	@Test(priority = 2, groups = "smoke")
 	public void checkingWelcome() {
-	
+
 		homepage.doWelcome();
 
 	}
 
-	@Test(priority = 3, groups="smoke")
+	@Test(priority = 3, groups = "smoke")
 	public void checkingInfo() {
-		
-		String infoclick=homepage.doInfo();
+
+		String infoclick = homepage.doInfo();
 		Assert.assertEquals(infoclick, "My Info");
-		
-		
-		
-		
-		
-	
 	}
-//	@Test(priority = 4)
-//	public void pagenavigation()
-//	{
-//		contactpage=homepage.getContactsPage();
-//		System.out.println("calling pagenavigation");
-//	}
-	
-	
+
 	@AfterMethod
 	public void tearDown() {
 		driver.quit();

@@ -1,5 +1,6 @@
 package com.hubspot.util;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -16,8 +17,8 @@ public class JavaScriptUtil {
 	public void flash(WebElement element) {
 		JavascriptExecutor js = ((JavascriptExecutor) driver);
 		String bgcolor = element.getCssValue("backgroundColor");
-		for (int i = 0; i < 20; i++) {
-			changeColor("rgb(0,100,0)", element);// 1
+		for (int i = 0; i < 10; i++) {
+			changeColor("rgb(0,200,0)", element);// 1
 			changeColor(bgcolor, element);// 2
 		}
 	}
@@ -120,5 +121,5 @@ public class JavaScriptUtil {
 		}
 	}
 
-
+	
 }

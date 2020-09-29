@@ -5,12 +5,13 @@ import org.openqa.selenium.WebDriver;
 import com.homepage.base.BasePage;
 import com.hubspot.util.Credentials;
 import com.hubspot.util.ElementUtil;
+import com.hubspot.util.JavaScriptUtil;
 
 public class LogInPage extends BasePage {
 
 	WebDriver driver;
 	ElementUtil Elementutil;
-	
+	JavaScriptUtil javaScriptUtil;
 
 	// pageObjects
 

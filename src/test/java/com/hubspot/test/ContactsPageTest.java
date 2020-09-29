@@ -2,9 +2,7 @@ package com.hubspot.test;
 
 import java.util.Properties;
 
-
 import org.openqa.selenium.WebDriver;
-import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
@@ -16,7 +14,7 @@ import com.hubspot.pages.HomePage;
 import com.hubspot.pages.LogInPage;
 import com.hubspot.util.Credentials;
 import com.hubspot.util.ElementUtil;
-import com.hubspot.util.ExcelUtil;
+import com.hubspot.utils.ExcelUtil;
 
 import io.qameta.allure.Description;
 import io.qameta.allure.Severity;
@@ -31,10 +29,10 @@ public class ContactsPageTest {
 	HomePage homepage;
 	Credentials credentials;
 	ContactsPage contactsPage;
-	com.hubspot.util.ExcelUtil excelutil;
+	public ExcelUtil excelutil;
 	ElementUtil elementutil;
 
-	@BeforeMethod(alwaysRun=true)
+	@BeforeMethod(alwaysRun = true)
 	public void setup() throws InterruptedException {
 		basepage = new BasePage();
 		properties = basepage.driverProperties();
@@ -42,37 +40,31 @@ public class ContactsPageTest {
 		driver = basepage.driver_init(browsername);
 		driver.get(properties.getProperty("url"));
 		loginpage = new LogInPage(driver);
-		// homepage = new HomePage(driver);
 
 		credentials = new Credentials(properties.getProperty("username"), properties.getProperty("password"));
 		homepage = loginpage.logIn(credentials);
 		contactsPage = homepage.getContactsPage();
-		elementutil =new ElementUtil(driver);
-		// excelutil = new com.hubspot.util.ExcelUtil();
+		elementutil = new ElementUtil(driver);
 
 	}
-
-	//
 
 	@DataProvider()
 	public Object[][] getContactData() {
-		Object data[][] = ExcelUtil.getTestData("EmpData");
+		Object data[][] = ExcelUtil.getTestData("DataTest");
 		return data;
 
 	}
-	
-	@Test(priority = 0, dataProvider = "getContactData", groups="sanity")
+
+	@Test(priority = 0, dataProvider = "getContactData", groups = "sanity")
 	@Description("verify contacts  Page Title Test.....")
 	@Severity(SeverityLevel.CRITICAL)
 	public void getFilling(String empnam, String username, String pwd, String confpwd) {
-		elementutil=contactsPage.filling(empnam, username, pwd, confpwd);
-		
-		
-		
+		contactsPage.filling(empnam, username, pwd, confpwd);
+
 	}
+
 	@AfterMethod
-	public void tearDown()
-	{
+	public void tearDown() {
 		driver.quit();
 	}
 

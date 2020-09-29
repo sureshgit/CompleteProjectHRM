@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 9, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 130.885 s <<< FAILURE! - in TestSuite
-getFilling(com.hubspot.test.ContactsPageTest)  Time elapsed: 5.559 s  <<< FAILURE!
+Tests run: 9, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 144.291 s <<< FAILURE! - in TestSuite
+getFilling(com.hubspot.test.ContactsPageTest)  Time elapsed: 3.59 s  <<< FAILURE!
 org.testng.TestNGException: 
 
 Data Provider public java.lang.Object[][] com.hubspot.test.ContactsPageTest.getContactData() returned a null value

@@ -23,7 +23,7 @@ public class ContactsPage extends BasePage {
 	By pim = By.xpath("//b[text()='PIM']");
 	By custome = By.linkText("Custom Fields");
 
-	public ElementUtil filling(String empname, String usernam, String passwod, String confpassword) {
+	public void filling(String empname, String usernam, String passwod, String confpassword) {
 
 		elementUtil.doSendKeys(employeename, empname);
 		elementUtil.doSendKeys(username, usernam);
@@ -31,7 +31,11 @@ public class ContactsPage extends BasePage {
 		elementUtil.doSendKeys(confipassword, confpassword);
 		elementUtil.waitForElementToBeClickable(save, 20).click();
 
-		return elementUtil;
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 
 	}
 

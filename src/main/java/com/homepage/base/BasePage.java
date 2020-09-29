@@ -22,8 +22,8 @@ public class BasePage {
 
 	WebDriver driver;
 	public Properties properties;
-	
-	
+	public static boolean highlightElement;
+
 	public static ThreadLocal<WebDriver> tDriver = new ThreadLocal<WebDriver>();
 
 	public static synchronized WebDriver getDriver() {
@@ -31,34 +31,29 @@ public class BasePage {
 	}
 
 	public WebDriver driver_init(String browsername) {
-		System.out.println("browsername is "+browsername);
+
+		highlightElement = properties.getProperty("highlight").equals("yes") ? true : false;
 		if (browsername.equals("chrome")) {
 			WebDriverManager.chromedriver().setup();
-			if(properties.getProperty("headless").equals("yes"))
-			{
+			if (properties.getProperty("headless").equals("yes")) {
 				ChromeOptions co = new ChromeOptions();
 				co.addArguments(".....headless");
 				driver = new ChromeDriver(co);
-			}
-			else
-			{
+			} else {
 				driver = new ChromeDriver();
 			}
 		}
-			
+
 		else if (browsername.equals("firefox")) {
 			WebDriverManager.firefoxdriver().setup();
-			if(properties.getProperty("headless").equals("yes"))
-			{
-				ChromeOptions co=new ChromeOptions();
+			if (properties.getProperty("headless").equals("yes")) {
+				ChromeOptions co = new ChromeOptions();
 				co.addArguments("headless");
 				driver = new FirefoxDriver(co);
-			}
-			else 
-			{
+			} else {
 				driver = new FirefoxDriver();
 			}
-			
+
 		} else if (browsername.equals("safari")) {
 			WebDriverManager.getInstance(SafariDriver.class).setup();
 			driver = new SafariDriver();
@@ -93,8 +88,7 @@ public class BasePage {
 
 		return properties;
 	}
-	
-	
+
 	public String getScreenshot() {
 
 		File src = ((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.FILE);
