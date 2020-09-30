@@ -79,7 +79,7 @@ public class BasePage {
 
 		} catch (FileNotFoundException e) {
 
-			System.out.println("some issue with configuration properties .....please correct your config");
+			System.out.println("some issue with configuration properties .......please correct your config");
 
 		} catch (IOException e) {
 
